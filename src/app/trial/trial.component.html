@@ -1,0 +1,63 @@
+<h2>Welcome to my {{title}} !</h2>
+
+<p>{{welcomeMessage}}</p>
+
+<div>{{score}}</div>
+
+<div>Name: {{student.name}} -- Age: {{student.age}}</div>
+
+
+<ul>
+  <li *ngFor="let name of students">{{name}}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let teacher of teachers">Name: {{teacher.name}} --- Subject: {{teacher.subject}}</li>
+</ul>
+
+
+<div class="if-class">
+  <label>First Lecture: </label>
+  <span *ngIf="day === 'Monday' ">Angular Development</span>
+  <span *ngIf="day === 'Tuesday' ">PPL</span>
+</div>
+
+<div [ngSwitch]="day" class="if-class">
+  <label>First Lecture: </label>
+  <span *ngSwitchCase = " 'Monday' ">Angular Development</span>
+  <span *ngSwitchCase = " 'Tuesday' ">PPL</span>
+  <span *ngSwitchDefault>Enjoy your day!</span>
+</div>
+
+<img src="./assets/facebook-logo.png" width="20%">
+
+
+
+<!-- 
+<div style="background-color: blue; color: white;">My color keeps changing!</div>
+
+<div [style.color]="'green'" >My color keeps changing!</div>
+
+<div [ngStyle]="{ 'background-color' : 'blue' , 'color' : 'green'} ">My color keeps changing!</div> -->
+
+
+
+
+<!-- <div class="blue-background" [class.white-text] = "showWhiteText" >My color keeps changing!</div> -->
+
+
+<div class="blue-background" [ngClass] = " { 'white-text' : showWhiteBoldText, 'bold-font' : showWhiteBoldText}" >My color keeps changing!</div>
+
+<img [src]="facebookImageLink" width="20%" (click)="sayHello()">
+
+
+<p> {{myName}} </p>
+<input type="text" [ngModel]="myName" (ngModelChange)="myName = $event">
+<input type="text" [(ngModel)]="myName">
+
+
+
+
+
+<div class="dummy-div"></div>
+
