@@ -1,0 +1,18 @@
+<p>Food Items:</p>
+<!-- <ol>
+    <li *ngFor="let item of foodItems">{{item}}</li>
+</ol> -->
+<app-list [items]="foodItems" (itemClicked)="showItemClicked($event)"></app-list>
+
+
+<p class="margin-top">Drinks:</p>
+<app-list [items]="drinks"></app-list>
+
+<app-list></app-list>
+
+
+
+
+<!-- <ol>
+    <li *ngFor="let drink of drinks">{{drink}}</li>
+</ol> -->
